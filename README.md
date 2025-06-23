@@ -1,3 +1,17 @@
+## 🔗 App Navigation (Important for Evaluator)
+
+Please visit the following routes after running the project:
+
+- 🧾 **Registration & Auth:** [http://localhost:3000/register](http://localhost:3000/register)
+  - Register with your email, roll number, and access code
+  - Automatically retrieves `clientID`, `clientSecret`, and `access_token`
+  
+- ✂️ **URL Shortener (Home):** [http://localhost:3000/](http://localhost:3000/)
+  - Shorten up to 5 URLs with optional custom code and expiry
+
+- 📊 **Statistics Dashboard:** [http://localhost:3000/stats](http://localhost:3000/stats)
+  - View short link history, click analytics, and expiry info
+
 # 🔗 URL Shortener App (Evaluation Project)
 
 This is a full-featured **React + Material UI** based URL Shortener application developed as part of the evaluation challenge.
