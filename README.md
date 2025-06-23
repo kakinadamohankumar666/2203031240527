@@ -1,70 +1,90 @@
-# Getting Started with Create React App
+# 🔗 URL Shortener App (Evaluation Project)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a full-featured **React + Material UI** based URL Shortener application developed as part of the evaluation challenge.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 🚀 Features
 
-### `npm start`
+- ✅ Shorten up to **5 URLs concurrently**
+- 📝 Supports **custom shortcodes** (optional)
+- ⏳ Allows setting **validity period** in minutes (optional)
+- 📬 Displays shortened links with:
+  - Original URL
+  - Short URL
+  - Expiry time
+- 🛡️ Complete **client-side validation** and error handling
+- 📊 Dedicated **Statistics Page** showing:
+  - Total click count per short link
+  - Click timestamp, referrer, and location (simulated)
+- 🧠 All data persisted in `localStorage` for demonstration
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 📌 Tech Stack
 
-### `npm test`
+- ⚛️ **React** (Functional components, Hooks)
+- 🎨 **Material UI (MUI)** for styling (no external CSS libraries used)
+- 📦 **Axios** for API communication
+- 🗃️ `localStorage` for storing auth, stats, and links
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## 🔐 Authentication Flow
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+The app uses the official **evaluation-service API** for:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Registration (`/register`)
+- Authentication (`/auth`) to get a valid `access_token`
+- Access token is stored in localStorage and used in protected calls
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+## 📁 Project Structure
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```
+src/
+├── components/
+│   ├── RegisterAndAuth.jsx
+│   ├── StatisticsPage.jsx
+│   └── [Other UI Components]
+├── App.js / index.js
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## 🧪 How to Run Locally
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+1. Clone the repo  
+   ```bash
+   git clone https://github.com/your-username/url-shortener.git
+   cd url-shortener
+   ```
 
-## Learn More
+2. Install dependencies  
+   ```bash
+   npm install
+   ```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+3. Start the app  
+   ```bash
+   npm start
+   ```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+4. Navigate to:
+   - `/register` for registration + auth
+   - `/` for URL shortener
+   - `/stats` for statistics dashboard
 
-### Code Splitting
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## ✅ Screenshots
 
-### Analyzing the Bundle Size
+*(Add screenshots here if required by the evaluator)*
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+---
 
-### Making a Progressive Web App
+## 📃 License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+This project is submitted for evaluation purposes only. All API integrations are for demo/testing under the instructions provided.
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
